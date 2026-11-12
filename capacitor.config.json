@@ -1,0 +1,8 @@
+{
+  "appId": "in.railonetracker.app",
+  "appName": "Rail One Tracker",
+  "webDir": "public",
+  "server": {
+    "androidScheme": "https"
+  }
+}

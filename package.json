@@ -1,0 +1,23 @@
+{
+  "name": "rail-one-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rail One Tracker - Indian Railways live train information",
+  "scripts": {
+    "start": "node server.js",
+    "android:init": "npx cap add android",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "dotenv": "^16.6.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}
