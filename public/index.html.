@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102b46">
+  <meta name="description" content="Rail One Tracker - live Indian Railways train status, schedules and station boards.">
+  <title>Rail One Tracker</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">🚆</div>
+    <div><div class="brand">RAIL ONE TRACKER</div><div class="tagline">INDIAN RAILWAYS • LIVE JOURNEY INFO</div></div>
+    <span class="live-pill"><i></i> LIVE</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">TRAVEL WITH CONFIDENCE</p>
+      <h1>Your train.<br><span>Your journey.</span></h1>
+      <p class="hero-copy">Check live running status, train schedules and station information in one place.</p>
+      <div class="search-card">
+        <label for="trainNo">TRAIN NUMBER</label>
+        <div class="search-row">
+          <input id="trainNo" inputmode="numeric" maxlength="6" placeholder="e.g. 12810" autocomplete="off">
+          <button id="trackBtn">Track train <span>→</span></button>
+        </div>
+        <div class="hint">Enter a 4–6 digit train number</div>
+      </div>
+    </section>
+
+    <section id="message" class="message hidden" role="status"></section>
+
+    <section id="result" class="result hidden">
+      <div class="section-head"><div><p class="eyebrow">TRAIN RUNNING STATUS</p><h2 id="trainTitle">Train details</h2></div><span id="statusChip" class="status-chip">Checking</span></div>
+      <div class="stats">
+        <div class="stat"><span>Current status</span><strong id="runStatus">—</strong></div>
+        <div class="stat"><span>Delay</span><strong id="delay">—</strong></div>
+        <div class="stat"><span>Last updated</span><strong id="updated">—</strong></div>
+      </div>
+      <div class="route-card">
+        <div class="route-label">JOURNEY PROGRESS</div>
+        <div class="route-line"><span class="dot start"></span><span class="line"></span><span class="dot end"></span></div>
+        <div class="route-stations"><div><strong id="previousStation">—</strong><small>Previous / origin</small></div><div class="right"><strong id="nextStation">—</strong><small>Next station</small></div></div>
+      </div>
+      <div class="footnote" id="sourceNote">Railway information is supplied by the configured data provider.</div>
+    </section>
+
+    <section class="feature-grid">
+      <article class="feature"><div class="feature-icon">📍</div><h3>Live train status</h3><p>Reported location, delay and next station.</p></article>
+      <article class="feature"><div class="feature-icon">🕒</div><h3>Train timetable</h3><p>Train details and scheduled stops.</p><span class="coming">Next module</span></article>
+      <article class="feature"><div class="feature-icon">🚉</div><h3>Station board</h3><p>Arrivals and departures by station.</p><span class="coming">Next module</span></article>
+      <article class="feature"><div class="feature-icon">🔎</div><h3>Trains between stations</h3><p>Find services between two stations.</p><span class="coming">Next module</span></article>
+    </section>
+
+    <footer>
+      <strong>Rail One Tracker</strong>
+      <p>Independent travel-information app. Not affiliated with Indian Railways, CRIS or IRCTC.</p>
+      <p>Always verify critical travel information through official railway channels.</p>
+    </footer>
+  </main>
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
